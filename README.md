@@ -15,6 +15,6 @@ $ mkdir /home/user/binary
 
 ```json:settings.json
 "code-runner.executorMap": {
-      "c": "cd $dir && sudo gcc -o $fileNameWithoutExt $fileName -lm -ldrawlib && rm tempCodeRunnerFile.c -f && mv $fileNameWithoutExt /home/user/binary -f && cd /home/user/binary && clear && ./$fileNameWithoutExt"
+      "c": "cd $dir && sudo gcc -o $fileNameWithoutExt $fileName -lm -ldrawlib && rm tempCodeRunnerFile.c -f && mv $fileNameWithoutExt /home/user/binary -f && cd /home/user/binary && clear && ./$fileNameWithoutExt && cd /home/user"
 }
 ```
