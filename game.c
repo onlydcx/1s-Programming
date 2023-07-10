@@ -18,8 +18,8 @@ void draw_arm(int x, int y) {
 
 void ufo() {
     int t, k, x, y;
+    int item_x = 100 + rand() % 500 + 1;
     while(1) {
-        int item_x = 400;
         int arm_x = 30;
 
         while(1) {
@@ -92,6 +92,7 @@ void ufo() {
                 dl_text(tmp, 350, 50, 1.5, DL_C("blue"), 2);
                 dl_resume();
                 dl_wait(0.003);
+                item_x = 100 + rand() % 500 + 1;
             }
         }
         else break;
@@ -117,6 +118,13 @@ int main(void) {
             break;
         }
     }
+    dl_clear(DL_C("black"));
+    dl_text("GAME OVER", 150, 200, 2.0, DL_C("white"), 2);
+    char __tmp_points[64];
+    sprintf(__tmp_points,"Score : %d",points);
+    dl_text(__tmp_points, 150, 300, 1.5, DL_C("white"), 2);
+    dl_resume();
+    dl_wait(10);
     
     return 0;
 }
